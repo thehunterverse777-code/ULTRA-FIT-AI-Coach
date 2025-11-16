@@ -74,7 +74,7 @@ if "GROQ_API_KEY" not in os.environ:
 client = Groq()
 
 # 3. إعداد الواجهة (Streamlit UI)
-st.set_page_config(page_title="ULTRA-FIT AI v1", layout="wide")
+st.set_page_config(page_title="COACH-CHAOUKI", layout="wide")
 st.title("💪 ULTRA-FIT AI v1: your personal coach")
 st.markdown("---")
 
@@ -105,3 +105,4 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     
 
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
