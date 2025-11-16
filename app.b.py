@@ -2,41 +2,6 @@ import streamlit as st
 import os
 from groq import Groq
 
-
-
-# الكود المخصص لإضافة صورة خلفية داكنة مع إضاءة خافتة
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-image: url("https://static.vecteezy.com/system/resources/thumbnails/041/388/946/small/ai-generated-gym-weights-on-textured-background-fitness-concept-photo.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed; 
-    }
-    /* جعل مربعات الدردشة شبه شفافة لتظهر الخلفية من تحتها */
-    .stChatMessage {
-        background-color: rgba(38, 39, 48, 0.85); /* لون داكن مع شفافية عالية */
-        border-radius: 10px;
-    }
-    /* تعديل لون الخلفية الأساسي للمحافظة على المظهر الداكن */
-    [data-testid="stAppViewContainer"] {
-        background-color: #0E1117; /* لون داكن جداً لخلفية الواجهة الأساسية */
-    }
-    /* تعديل الأزرار لتكون واضحة على الخلفية الداكنة */
-    .stButton>button {
-        border: 2px solid #FF4F00;
-        background-color: #FF4F00; 
-        color: white;
-        border-radius: 10px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
 # 1. تعريف الـ System Prompt (القلب ديال التطبيق)
 SYSTEM_PROMPT = """
 You are COACH CHAOUKI v1 — a specialist AI fitness coach. Your domain is STRICTLY limited to:
@@ -140,6 +105,7 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     
 
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
 
 
 
