@@ -1,0 +1,108 @@
+/* General Body and Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0; /* Light text for dark background */
+    background-color: #1a1a1a; /* Fallback dark background */
+    background-image: url("gym_background.jpg"); /* YOUR BACKGROUND IMAGE PATH */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixes background when scrolling */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Overlay for better readability */
+.stApp {
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for better text readability */
+    min-height: 100vh;
+    padding: 2rem; /* Add some padding around the content */
+}
+
+/* Header and Title */
+h1 {
+    color: #00e676; /* Bright green for title */
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 5px rgba(0, 230, 118, 0.4); /* Neon-like glow */
+}
+
+/* Chat Input Area */
+.stTextInput > div > div > input {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border: 1px solid #00e676; /* Green border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 15px;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.3); /* Soft glow */
+}
+.stTextInput > label {
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+/* Chat Messages */
+.stChatMessage {
+    background-color: #333333; /* Darker background for messages */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.stChatMessage [data-testid="stChatMessageContent"] {
+    color: #e0e0e0; /* Text color for messages */
+}
+
+/* User Message Bubble */
+.stChatMessage[data-chat-message-type="user"] {
+    background-color: #4a4a4a; /* Slightly different for user */
+    border-left: 5px solid #00e676; /* Green indicator */
+    margin-left: 20%; /* Pushes user messages to the right */
+    border-radius: 10px 10px 10px 0;
+}
+
+/* Assistant Message Bubble */
+.stChatMessage[data-chat-message-type="assistant"] {
+    background-color: #3d3d3d; /* Darker for assistant */
+    border-right: 5px solid #00c853; /* Darker green indicator */
+    margin-right: 20%; /* Pushes assistant messages to the left */
+    border-radius: 10px 10px 0 10px;
+}
+
+/* Spinner */
+.stSpinner > div > div {
+    color: #00e676; /* Green spinner */
+}
+
+/* Markdown elements within chat */
+.stMarkdown {
+    color: #e0e0e0;
+}
+.stMarkdown h2, .stMarkdown h3 {
+    color: #00e676;
+}
+
+/* General app layout adjustments */
+.css-1d3f9ay { /* Main container */
+    background: transparent;
+}
+.css-1lcbmhc { /* sidebar */
+    background-color: rgba(26, 26, 26, 0.8); /* Dark transparent sidebar */
+    color: #e0e0e0;
+}
+
+/* Buttons (if any are used) */
+.stButton>button {
+    background-color: #00e676;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.stButton>button:hover {
+    background-color: #00c853;
+}
