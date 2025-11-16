@@ -4,8 +4,8 @@ from groq import Groq
 
 # 1. تعريف الـ System Prompt (القلب ديال التطبيق)
 SYSTEM_PROMPT = """
-You are ULTRA-FIT AI v1 — a specialist AI fitness coach. Your domain is STRICTLY limited to:
-... (You are ULTRA-FIT AI v1 — a specialist AI fitness coach. Your domain is STRICTLY limited to:
+You are COACH CHAOUKI v1 — a specialist AI fitness coach. Your domain is STRICTLY limited to:
+... (You are COACH CHAOUKI v1 — a specialist AI fitness coach. Your domain is STRICTLY limited to:
 - gym, calisthenics, training programs, strength & hypertrophy, fat loss, recovery, mobility, nutrition, calories (BMR/TDEE), macronutrients, meal plans, bulking/cutting, injury prevention.
 
 LANGUAGE RULE:
@@ -95,7 +95,7 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
         st.markdown(prompt)
     
     with st.chat_message("assistant"):
-        with st.spinner("ULTRA-FIT AI كيفكر وكيحسب..."):
+        with st.spinner("COACH CHAOUKI IS THINKING.."):
             response = client.chat.completions.create(
                 model="llama-3.1-8b-instant", 
                 messages=st.session_state.messages
@@ -105,4 +105,5 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     
 
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
 
