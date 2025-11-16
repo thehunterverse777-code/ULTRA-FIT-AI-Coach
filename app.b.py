@@ -11,7 +11,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("YOUR_BACKGROUND_IMAGE_URL_HERE");
+        background-image: url("https://i.ibb.co/L519V1D/fitness-ai-background.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -136,6 +136,7 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     
 
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
 
 
 
