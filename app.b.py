@@ -2,9 +2,39 @@ import streamlit as st
 import os
 from groq import Groq
 
-import streamlit as st
-import os
-from groq import Groq
+
+
+# الكود المخصص لإضافة صورة خلفية داكنة مع إضاءة خافتة
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("<image-tokens-bardstorage://RESPONSE_DATA:35d04dd014798e3b000643bc2fc7867205fe4d484803733e:144027732496783514618cfdfb38fea75d1a:1:0:0:>");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+    }
+    /* جعل مربعات الدردشة شبه شفافة لتظهر الخلفية من تحتها */
+    .stChatMessage {
+        background-color: rgba(38, 39, 48, 0.85); /* لون داكن مع شفافية عالية */
+        border-radius: 10px;
+    }
+    /* تعديل لون الخلفية الأساسي للمحافظة على المظهر الداكن */
+    [data-testid="stAppViewContainer"] {
+        background-color: #0E1117; /* لون داكن جداً لخلفية الواجهة الأساسية */
+    }
+    /* تعديل الأزرار لتكون واضحة على الخلفية الداكنة */
+    .stButton>button {
+        border: 2px solid #FF4F00;
+        background-color: #FF4F00; 
+        color: white;
+        border-radius: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 # 1. تعريف الـ System Prompt (القلب ديال التطبيق)
@@ -110,6 +140,7 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     
 
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
 
 
 
