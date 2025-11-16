@@ -9,7 +9,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("<image-tokens-bardstorage://RESPONSE_DATA:35d04dd014798e3b000643bc2fc7867205fe4d484803733e:144027732496783514618cfdfb38fea75d1a:1:0:0:>");
+        background-image: url("https://static.vecteezy.com/system/resources/thumbnails/041/388/946/small/ai-generated-gym-weights-on-textured-background-fitness-concept-photo.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -140,6 +140,7 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     
 
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
 
 
 
