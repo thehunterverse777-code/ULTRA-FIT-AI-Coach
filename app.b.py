@@ -6,32 +6,6 @@ import streamlit as st
 import os
 from groq import Groq
 
-# الكود المخصص لإضافة صورة خلفية (Custom CSS)
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-image: url("https://i.ibb.co/Jq0tG9R/gym-dark-background.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed; /* تثبيت الصورة عند التمرير */
-    }
-    /* لتعديل لون خلفية مربع الدردشة لتكون شفافة أو شبه شفافة */
-    .stChatMessage {
-        background-color: rgba(38, 39, 48, 0.7); /* لون داكن مع شفافية */
-        border-radius: 10px;
-    }
-    .stButton>button {
-        border: 2px solid #FF4F00; /* لون الحافة */
-        background-color: #FF4F00; /* لون الخلفية */
-        color: white; /* لون النص */
-        border-radius: 10px; /* حواف دائرية */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # 1. تعريف الـ System Prompt (القلب ديال التطبيق)
 SYSTEM_PROMPT = """
@@ -136,6 +110,7 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     
 
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
 
 
 
