@@ -75,7 +75,7 @@ client = Groq()
 
 # 3. إعداد الواجهة (Streamlit UI)
 st.set_page_config(page_title="ULTRA-FIT AI v1", layout="wide")
-st.title("💪 ULTRA-FIT AI v1: مدربك الشخصي للياقة البدنية")
+st.title("💪 ULTRA-FIT AI v1: your personal coach")
 st.markdown("---")
 
 # 4. إدارة سجل المحادثة (Memory)
@@ -89,7 +89,7 @@ for message in st.session_state.messages:
             st.markdown(message["content"])
 
 # 5. معالجة إدخال المستخدم
-if prompt := st.chat_input("سولني على التدريب، التغذية، أو أي حاجة عندها علاقة باللياقة..."):
+if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
@@ -103,4 +103,5 @@ if prompt := st.chat_input("سولني على التدريب، التغذية، 
             assistant_response = response.choices[0].message.content
             st.markdown(assistant_response)
     
+
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
