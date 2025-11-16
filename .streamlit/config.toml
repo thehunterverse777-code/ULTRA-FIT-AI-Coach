@@ -1,6 +1,19 @@
 [theme]
-primaryColor="#FF4500" 
-backgroundColor="#FFFFFF" 
-secondaryBackgroundColor="#F0F2F6"
-textColor="#262730"
+# الوضع الداكن (خلفية سوداء)
+base="dark" 
+
+# اللون الرئيسي (لون الأزرار والعناصر - برتقالي أو أخضر ساطع)
+# هنا اخترنا البرتقالي الناري (الـ Gym Colors)
+primaryColor="#FF4F00" 
+
+# لون خلفية التطبيق (خلفية سوداء بالكامل)
+backgroundColor="#0E1117" 
+
+# لون الخلفية الثانوية (لمربعات المحادثة)
+secondaryBackgroundColor="#262730"
+
+# لون النص
+textColor="#FAFAFA"
+
+# نوع الخط
 font="sans serif"
