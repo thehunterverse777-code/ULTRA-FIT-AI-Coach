@@ -106,10 +106,10 @@ for message in st.session_state.messages:
 # 5. معالجة إدخال المستخدم
 if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
+    with st.chat_message("user",avatar="🏋🏻‍♂️"):
         st.markdown(prompt)
     
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant",avatar="🎩"):
         with st.spinner("COACH CHAOUKI IS THINKING.."):
             response = client.chat.completions.create(
                 model="llama-3.1-8b-instant", 
@@ -120,6 +120,7 @@ if prompt := st.chat_input("ask me anything about fitness,gym,muscles....."):
     
 
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
 
 
 
