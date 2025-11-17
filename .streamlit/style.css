@@ -4,7 +4,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #e0e0e0; /* Light text for dark background */
     background-color: #1a1a1a; /* Fallback dark background */
-    background-image: url("gym_background.jpg"); /* YOUR BACKGROUND IMAGE PATH */
+    background-image: url("/app/static/gym_background.jpg"); /* YOUR BACKGROUND IMAGE PATH */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Fixes background when scrolling */
